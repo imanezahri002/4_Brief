@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <h2>To Do Liste</h2>
+        <img src="./images/logo-todoliste.png" alt="" class="logo">
+    </nav>
+    <section class="plan">
+        <div class="premier">
+            <form class="group1" id="formulaire" action="">
+            <div class="grp-un">
+            <input type="text" placeholder="plan d'aujourd'hui?"  class="text" id="title">
+            <select name="Etat" id="status" class="text">
+                <option value="">Etat</option>
+                <option value="To Do">To Do</option>
+                <option value="Doing">Doing</option>
+                <option value="Done">Done</option>
+            </select>
+            </div>
+            <div class="grp-deux">
+            <input type="date" class="text" id="date">
+            <input type="text" class="text" id="descri" placeholder="Decrivez votre tache"></input>
+            </div>
+            <div class="bouton"><button type="button" class="text" onclick="ajouter()" id="btn">Ajouter</button></div>
+        </form>
+        </div>
+        <div class="deuxieme">
+            <img src="./images/cal.png" alt="" class="calendar">
+        </div>
+    </section>
+    <section class="tableau">
+        <table id="tableau-js">
+            <thead>
+                <tr>
+                    <th>Tache</th>
+                    <th>Description</th>
+                    <th>Etat</th>
+                    <th>Date Limite</th>
+                    <th>Modifier</th>
+                    <th>Supprimer</th>
+                </tr>
+            </thead>
+            <tbody id="contenu">
+
+            </tbody>
+
+                
+        </table>
+    </section>
+    <!-- <footer>
+        <h3>YouCode-CodeCraft</h3>
+    </footer> -->
+    <script src="script.js"></script>
+</body>
+</html>
