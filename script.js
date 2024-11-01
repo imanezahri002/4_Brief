@@ -10,12 +10,12 @@ function ajouter() {
         eta: document.getElementById("status").value,
         date: document.getElementById("date").value,
     };
-    // if(id&&titre&&desc&&eta&&date){
+    if(tach.titre && tach.desc && tach.eta && tach.date){
     taches.push(tach);
     afficherTache();
     document.getElementById("formulaire").reset();
+    }else alert("ila faut remplir les informations ");
 }
-// }
 
 function afficherTache() {
     const tbody = document.getElementById("contenu");
@@ -113,6 +113,6 @@ function modifier(i){
     }
 function suprimer(i){
     let tr=document.getElementsByTagName("tr")[i+1];
-    tr.remove();
-    taches.pop(i);
+    taches.splice(i , 1);
+    afficherTache();   
 }
